@@ -1,0 +1,48 @@
+language: php
+php:
+  #- '5.5'
+  - '7.0'
+services:
+  - docker
+
+before_install:
+
+  # Add our SSH key for deploy func
+  openssl aes-256-cbc -K $encrypted_262c845c1992_key -iv $encrypted_262c845c1992_iv -in travis.id_rsa.enc -out travis.id_rsa -d
+
+install:
+
+  # Install composer deps
+  - composer install
+
+script:
+
+  # Run code and styling
+  - composer test
+
+after_success:
+
+  # Set up the SSH key and config
+  - mv travis.id_rsa $HOME/.ssh/travis.id_rsa
+  - chmod 600 $HOME/.ssh/travis.id_rsa
+  - eval "$(ssh-agent)"
+  - ssh-add $HOME/.ssh/travis.id_rsa
+  - cp -rf ssh-config $HOME/.ssh/config
+
+  # Set a user for things
+  - git config --global user.name "Travis Bot"
+  - git config --global user.email "geoff@thinktandem.io"
+
+  # Set up our repos
+  - git remote add upstream ssh://codeserver.dev.ad44f802-743e-4b94-a0f5-ca82c92dfd44@codeserver.dev.ad44f802-743e-4b94-a0f5-ca82c92dfd44.drush.in:2222/~/repository.git
+
+  # We need to re-add this in because our clone was originally read-only
+  - git remote rm origin
+  - git remote add origin git@github.com:thinktandem/my-kb-bd.git
+  - git checkout $TRAVIS_BRANCH
+
+  # Pull in any remote changes
+  - git pull upstream $TRAVIS_BRANCH
+
+  # And then deploy
+  - git push upstream $TRAVIS_BRANCH
