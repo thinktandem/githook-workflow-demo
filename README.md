@@ -35,7 +35,8 @@ If you're working on a new project, follow these steps to get Travis setup:
   * `ssh-keygen -t rsa -b 4096 -C "{yourname}@{email.com}"`
     * at the prompts you can name the file whatever you like: I will go with `travis.id_rsa` for this repo.
   * Encrypt the private key with the `travis` cli gem
-    * `gem install travis` you may need `sudo` for this depending on your system set up
+    * If you don't already have the travis gem installed; install it: `gem install travis` you may need `sudo` for this depending on your system set up
+    * Login to travis-ci.org and hook up your github repo to travis.
     * `travis encrypt-file -r {your_github_user_or_org}/{your_repo} travis.id_rsa`
     * Take the output of that command and add it to the `.travis.yml` file.  It will be something like this:
     `openssl aes-256-cbc -K {$encrypted_262c845c1992_key} -iv {$encrypted_262c845c1992_iv} -in travis.id_rsa.enc -out travis.id_rsa -d`
