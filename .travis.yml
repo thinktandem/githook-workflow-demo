@@ -35,6 +35,9 @@ after_success:
   # Set up our repos
   - git remote add upstream ssh://gff@50.116.33.219/var/www/githook-workflow-demo
 
+  # Add production server to known_hosts
+  - echo 50.116.33.219 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDdTpRoh/uzu0DEs0AWfqacOqmh1M5YoZV0s3p3RUTLCqdg1IfApyjUKPxI9sNKzECbwqC9BuareXIh9A8UR04iFPUqr7VaLbUpq5ijIMl4BGEVZARautdUiY22    3PjoOEchIhJgC2GZG5caWpcWE9Q5P2x3GJg4MxYwnOOE/QBswwmuocoOnbX/NbrH0DNLW/yggoUAM8J2BU9TmYHaSbj2FhxEvePSC94o8sTKkiwjfkm4ikj6HtaHaJOj0re4lL/oY47lXE5S1vo3iQyDw5KjkM6wqP0SwR5f/xKcGvLIO2XfW6cEpbfLHg6Krfj0KfiFG/jhFWDcnMHKR4Zjb/vL >> $HOME/.ssh/known_hosts
+
   # We need to re-add this in because our clone was originally read-only
   - git remote rm origin
   - git remote add origin git@github.com:thinktandem/githook-workflow-demo.git
