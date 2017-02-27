@@ -1,5 +1,5 @@
 {
-  "name": "thinktandem/my-kb-bd",
+  "name": "thinktandem/githook-workflow-demo",
   "description": "Backdrop CI, CD, Demo",
   "require-dev": {
     "overtrue/phplint": "*",

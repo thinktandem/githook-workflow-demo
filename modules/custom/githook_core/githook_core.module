@@ -1,0 +1,6 @@
+<?php
+
+/**
+ * @file
+ * POC for backdrop + travis + githook workflow.
+ */

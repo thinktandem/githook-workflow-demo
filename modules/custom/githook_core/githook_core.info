@@ -1,0 +1,6 @@
+name = Githook Core
+description = I did it.
+core = 1.x
+backdrop = 1.x
+version = 1.x-0.x
+type = module

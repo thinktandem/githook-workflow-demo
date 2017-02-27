@@ -1,0 +1,10 @@
+path: ./modules/custom
+extensions:
+  - php
+  - inc
+  - module
+  - install
+  - theme
+exclude:
+  - vendor
+  - public
