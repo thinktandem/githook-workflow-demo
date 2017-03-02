@@ -1,12 +1,13 @@
 language: php
 php:
-  #- '5.5'
+  - '5.5'
   - '7.0'
 services:
   - docker
 
 addons:
-  ssh_known_hosts: 50.116.33.219
+  #ssh_known_hosts: 50.116.33.219
+  ssh_known_hosts: 192.155.88.91
 
 before_install:
 
