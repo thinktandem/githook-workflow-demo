@@ -37,7 +37,7 @@ after_success:
   - git config --global user.email "geoff@thinktandem.io"
 
   # Set up our repos
-  - git remote add upstream ssh://gff@50.116.33.219/var/www/githook-workflow-demo
+  - git remote add upstream ssh://gff@192.155.88.91/var/www/backdrop
 
   # We need to re-add this in because our clone was originally read-only
   - git remote rm origin
