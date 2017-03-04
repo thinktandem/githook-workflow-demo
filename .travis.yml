@@ -1,6 +1,6 @@
 language: php
 php:
-  - '5.5'
+  #- '5.5'
   - '7.0'
 services:
   - docker
@@ -54,6 +54,6 @@ after_success:
   - git push upstream $TRAVIS_BRANCH
 
   # Run the post git tasks in deploy_backdrop.sh
-  - sshpass ssh gff@192.155.88.91 git reset --hard
+  - sshpass ssh gff@192.155.88.91 cd /var/www/backdrop git reset --hard
   - sshpass ssh gff@192.155.88.91 chmod +x /var/www/backdrop/deploy_scripts/deploy_backdrop.sh
   - sshpass ssh gff@192.155.88.91 /var/www/backdrop/deploy_scripts/deploy_backdrop.sh
