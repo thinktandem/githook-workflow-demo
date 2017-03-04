@@ -7,9 +7,6 @@
 # move to the git repo.
 cd /var/www/backdrop
 
-# Reset the repo since we are pusing to a non --bare repo.
-git reset --hard
-
 # Clear cache.
 /usr/local/bin/drush cc all
 
