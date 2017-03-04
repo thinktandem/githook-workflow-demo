@@ -9,7 +9,8 @@ addons:
   ssh_known_hosts: 192.155.88.91
 
   apt:
-    - sshpass
+    packages:
+      - sshpass
 
 before_install:
 
