@@ -49,3 +49,6 @@ after_success:
 
   # And then deploy
   - git push upstream $TRAVIS_BRANCH
+
+  # Run the post git tasks in deploy_backdrop.sh
+  sshpass -e ssh gff@192.155.88.91 /home/gff/code/deploy_scripts/deploy_backdrop.sh
