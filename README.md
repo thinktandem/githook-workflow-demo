@@ -7,9 +7,11 @@ Github is the canonical code repository. Once you've setup the workflow, you sho
 1. Get access to the Pantheon site (or make a new Backdrop Project).
 2. Clone the Pantheon site to your local.
 3. Create a new repo on Github.
-4. Add that repo as a new remote by running `git remote github [URL of Github repo]`
+4. Add that repo as a new remote by running
+`git remote github [URL of Github repo]`
 
-For more information on the best Github workflow for teams, checkout the [Github Flow](https://guides.github.com/introduction/flow) docs.
+For more information on the best Github workflow for teams, checkout the
+[Github Flow](https://guides.github.com/introduction/flow) docs.
 
 ## Composer and Tests
 
