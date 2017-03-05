@@ -1,3 +1,9 @@
+<div style="float: left; margin-right: 9px;">
+  <img src="https://avatars0.githubusercontent.com/u/20853287?v=3&s=200">
+</div>
+Kalabox, Continuous Integration (CI), and Continuous Deployment (CD)
+----
+
 A Backdrop CMS site with all the tools for setting up a continuous integration workflow with Pantheon and TravisCI.
 
 ## Github
