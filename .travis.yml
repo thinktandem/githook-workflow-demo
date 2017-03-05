@@ -8,10 +8,6 @@ services:
 addons:
   ssh_known_hosts: 192.155.88.91
 
-  apt:
-    packages:
-      - sshpass
-
 before_install:
 
   # Add our SSH key for deploy func
@@ -52,8 +48,3 @@ after_success:
 
   # And then deploy
   - git push upstream $TRAVIS_BRANCH
-
-  # Run the post git tasks in deploy_backdrop.sh
-  #- sshpass ssh gff@192.155.88.91 cd /var/www/backdrop && git reset --hard
-  #- sshpass ssh gff@192.155.88.91 chmod +x /var/www/backdrop/deploy_scripts/deploy_backdrop.sh
-  #- sshpass ssh gff@192.155.88.91 /var/www/backdrop/deploy_scripts/deploy_backdrop.sh
