@@ -8,10 +8,6 @@ services:
 addons:
   ssh_known_hosts: 192.155.88.91
 
-  apt:
-    packages:
-      - sshpass
-
 before_install:
 
   # Add our SSH key for deploy func
