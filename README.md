@@ -62,12 +62,12 @@ repository:
   # Set up our repos
   - git remote add upstream [YOUR PRODUCTION PROJECT'S GIT REPO PATH]
 ```
-Modify the `known_hosts` line of `.travis.yml` to the IP Address of your server.
-4. Make sure you push these changes to your new Github repo:
+4. Modify the `known_hosts` line of `.travis.yml` to the IP Address of your server.
+5. Make sure you push these changes to your new Github repo:
 `git push github`
-5. Go to travisci.org and sign in with your Github account. You should see this
+6. Go to travisci.org and sign in with your Github account. You should see this
 Github repository as one of the available options; toggle it on.
-6. Go to the production server and add the public key from the public/private
+7. Go to the production server and add the public key from the public/private
 key pair in step 2 (`travis.id_rsa.pub` if you are following exactly) and add
 that to your `/home/DEPLOY_USER/.ssh/authorized_keys` file on the server.
 
