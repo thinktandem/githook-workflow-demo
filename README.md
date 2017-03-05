@@ -44,23 +44,24 @@ If you're working on a new project, follow these steps to get Travis setup:
     `openssl aes-256-cbc -K {$encrypted_262c845c1992_key} -iv {$encrypted_262c845c1992_iv} -in travis.id_rsa.enc -out travis.id_rsa -d`
     * Replace the out section of the command with `$HOME/.ssh/travis.id_rsa.enc`
     * Commit the `travis.id_rsa.enc` file to your repo.  DO NOT commit the unecrypted file; add the `travis.id_rsa` and travis.id_rsa.pub to your `.gitignore` file.
-3. Modify the line below "Set up our repos" to include your Pantheon repository:
+3. Modify the line below "Set up our repos" to include your production repository:
 ```
   # Set up our repos
-  - git remote add upstream [YOUR PANTHEON PROJECT'S GIT REPO PATH]
+  - git remote add upstream [YOUR PRODUCTION PROJECT'S GIT REPO PATH]
 ```
 4. Make sure you push these changes to your new Github repo:
 `git push github`
-5. Go to travisci.org and sign in with your Github account. You should see this Github repository as one of the available options; toggle it on.
-6. Go to the Pantheon dashboard and add the public key from the public/private key pair in step 2 (`travis.id_rsa.pub` if you are following exactly) and add that to your keys on your Pantheon profile.
+5. Go to travisci.org and sign in with your Github account. You should see this
+Github repository as one of the available options; toggle it on.
+6. Go to the production server and add the public key from the public/private
+key pair in step 2 (`travis.id_rsa.pub` if you are following exactly) and add
+that to your `/home/DEPLOY_USER/.ssh/authorized_keys` file on the server.
 
-Now when you push a change to your Github repo, it should automatically deploy your changes to Pantheon, provided they pass the testing.
+Now when you push a change to your Github repo, it will automatically deploy
+your changes to production, provided they pass the testing.
 
 
-## Pantheon
+## Production
 
-Pantheon is where the site is hosted! The biggest advantage of using our new workflow with Pantheon is that it helps prevent "blocking" the pipeline to production.
-
-Say, for example, you're working on a big new feature and have deployed that work to the Pantheon "Test" environment so your PM can test it out. If there's a bug on the Live environment, you'll have to do a [hotfix](https://pantheon.io/docs/hotfixes/) to get around it.
-
-In the new workflow, you'd never get into this situation. According to Gitflow, all your work should be on a separate Git branch. This branch is deployed by Travis to Pantheon, where it can be made into a [Multidev environment](https://pantheon.io/docs/multidev/) for testing.
+Production can be anything! Pantheon, Platform.sh, Linode, AWS whatever you like.
+For this demo I'm using a Linode server.
