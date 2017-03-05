@@ -2,7 +2,9 @@ A Backdrop CMS site with all the tools for setting up a continuous integration w
 
 ## Github
 
-Github is the canonical code repository. Once you've setup the workflow, you should push your changes to Github, and those will be automatically deployed to Pantheon (provided they pass tests) by Travis. To setup with Github...
+Github is the canonical code repository. Once you've setup the workflow, you
+should push your changes to Github, and those will be automatically deployed to
+production (provided they pass tests) by Travis. To setup with Github...
 
 1. Get access to the Pantheon site (or make a new Backdrop Project).
 2. Clone the Pantheon site to your local.
