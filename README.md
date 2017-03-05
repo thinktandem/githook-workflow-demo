@@ -58,10 +58,10 @@ If you're working on a new project, follow these steps to get Travis setup:
     `.gitignore` file.
 3. Modify the line below "Set up our repos" to include your production
 repository:
-```
-  # Set up our repos
-  - git remote add upstream [YOUR PRODUCTION PROJECT'S GIT REPO PATH]
-```
+  ```
+    # Set up our repos
+    - git remote add upstream [YOUR PRODUCTION PROJECT'S GIT REPO PATH]
+  ```
 4. Modify the `known_hosts` line of `.travis.yml` to the IP Address of your server.
 5. Make sure you push these changes to your new Github repo:
 `git push github`
