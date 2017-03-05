@@ -93,7 +93,6 @@ On the server:
 
   echo "determining branch"
 
-  #branch=`echo $1| cut -d/ -f3`
   read oldrev newrev refname
   branch=${refname}
 
