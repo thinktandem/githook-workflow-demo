@@ -25,7 +25,9 @@ We will use composer to download and manage phpcs and other php packages.
 
 ## Travis
 
-Travis is where all the build magic happens. The .travis.yml file in this repo describes a number of steps to build, run a few basic tests, and then deploy our project to Pantheon.
+Travis is where all the build magic happens. The `.travis.yml` file in this repo
+describes a number of steps to build, run a few basic tests, and then deploy our
+project to production.
 
 If you're working on a new project, follow these steps to get Travis setup:
 
