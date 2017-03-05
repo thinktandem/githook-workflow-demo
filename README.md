@@ -61,10 +61,7 @@ Now when you push a change to your Github repo, it will automatically deploy
 your changes to production, provided they pass the testing.
 
 
-## Pantheon
+## Production
 
-Pantheon is where the site is hosted! The biggest advantage of using our new workflow with Pantheon is that it helps prevent "blocking" the pipeline to production.
-
-Say, for example, you're working on a big new feature and have deployed that work to the Pantheon "Test" environment so your PM can test it out. If there's a bug on the Live environment, you'll have to do a [hotfix](https://pantheon.io/docs/hotfixes/) to get around it.
-
-In the new workflow, you'd never get into this situation. According to Gitflow, all your work should be on a separate Git branch. This branch is deployed by Travis to Pantheon, where it can be made into a [Multidev environment](https://pantheon.io/docs/multidev/) for testing.
+Production can be anything! Pantheon, Platform.sh, Linode, AWS whatever you like.
+For this demo I'm using a Linode server.
