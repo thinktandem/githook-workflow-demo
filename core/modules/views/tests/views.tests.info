@@ -303,3 +303,8 @@ name = Test the view class
 description = Tests some  functionality of the view class.
 group = Views
 file = views_view.test
+
+; Added by Backdrop CMS packaging script on 2017-03-15
+project = backdrop
+version = 1.6.3
+timestamp = 1489643437

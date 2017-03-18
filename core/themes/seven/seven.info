@@ -8,3 +8,8 @@ stylesheets[screen][] = css/style.css
 stylesheets[screen][] = css/responsive-tabs.css
 
 scripts[] = js/script.js
+
+; Added by Backdrop CMS packaging script on 2017-03-15
+project = backdrop
+version = 1.6.3
+timestamp = 1489643437
