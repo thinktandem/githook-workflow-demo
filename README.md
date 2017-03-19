@@ -17,7 +17,7 @@ production (provided they pass tests) by Travis. To setup with Github...
 2. Clone the site to your local.
 3. Create a new repo on Github.
 4. Add that repo as a new remote by running
-`git remote github [URL of Github repo]`
+`git remote add github [URL of Github repo]`
 
 For more information on the best Github workflow for teams, checkout the
 [Github Flow](https://guides.github.com/introduction/flow) docs.
