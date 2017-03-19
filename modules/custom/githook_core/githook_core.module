@@ -20,6 +20,15 @@ function githook_core_menu() {
   return $items;
 }
 
+/**
+ * Page callback for hello/% path.
+ *
+ * @param string $url_arg
+ *   The argument passed in via url.
+ *
+ * @return string
+ *   The markup for the page content.
+ */
 function githook_core_hello($url_arg) {
   $markup = "<p>This is a thing: $url_param</p>";
 
