@@ -82,6 +82,12 @@
         "access own webform submissions",
         "edit own webform submissions",
         "delete own webform submissions",
-        "edit webform components"
+        "edit webform components",
+        "assign roles",
+        "create events content",
+        "edit own events content",
+        "edit any events content",
+        "delete own events content",
+        "delete any events content"
     ]
 }
