@@ -1,0 +1,46 @@
+{
+    "_config_name": "field.instance.node.events.field_img",
+    "field_name": "field_img",
+    "entity_type": "node",
+    "bundle": "events",
+    "label": "img",
+    "widget": {
+        "weight": "-3",
+        "type": "image_image",
+        "module": "image",
+        "active": 1,
+        "settings": {
+            "progress_indicator": "throbber",
+            "preview_image_style": "thumbnail"
+        }
+    },
+    "description": "",
+    "required": 0,
+    "deleted": 0,
+    "default_value": null,
+    "default_value_function": null,
+    "settings": {
+        "file_directory": "",
+        "file_extensions": "png gif jpg jpeg",
+        "max_filesize": "",
+        "max_dimensions": "",
+        "min_dimensions": "",
+        "alt_field": 0,
+        "title_field": 0,
+        "default_image": "",
+        "user_register_form": false
+    },
+    "display": {
+        "default": {
+            "label": "above",
+            "type": "image",
+            "settings": {
+                "image_style": "",
+                "image_link": "",
+                "image_float": ""
+            },
+            "module": "image",
+            "weight": 1
+        }
+    }
+}
