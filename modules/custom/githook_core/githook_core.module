@@ -4,3 +4,33 @@
  * @file
  * POC for backdrop + travis + githook workflow.
  */
+
+/**
+ * Implements hook_menu().
+ */
+function githook_core_menu() {
+  $items = array();
+  $items['hello/%'] = array(
+    'title' => 'kwigibo',
+    'page callback' => 'githook_core_hello',
+    'page arguments' => array(1),
+    'access callback' => TRUE,
+  );
+
+  return $items;
+}
+
+/**
+ * Page callback for hello/% path.
+ *
+ * @param string $url_arg
+ *   The argument passed in via url.
+ *
+ * @return string
+ *   The markup for the page content.
+ */
+function githook_core_hello($url_arg) {
+  $markup = "<p>This is a thing: $url_param</p>";
+
+  return $markup;
+}
